@@ -8,22 +8,22 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
-  --bg:#0a0f0d;
-  --bg2:#111816;
-  --bg3:#161e1b;
-  --sage:#3ecf8e;
-  --sage-dim:#2a9e68;
-  --sage-glow:rgba(62,207,142,0.15);
-  --sage-glow2:rgba(62,207,142,0.06);
-  --gold:#d4a84b;
-  --gold-dim:rgba(212,168,75,0.15);
-  --text:#f0f4f2;
-  --text2:#8a9e96;
-  --text3:#4a5e57;
-  --border:rgba(62,207,142,0.12);
-  --border2:rgba(240,244,242,0.06);
+  --bg:#0a0e12;
+  --bg2:#0f1419;
+  --bg3:#141a20;
+  --sage:#00d9a3;
+  --sage-dim:#00a87a;
+  --sage-glow:rgba(0,217,163,0.15);
+  --sage-glow2:rgba(0,217,163,0.06);
+  --gold:#ffd700;
+  --gold-dim:rgba(255,215,0,0.15);
+  --text:#f5f7fa;
+  --text2:#9ba5b0;
+  --text3:#5a6570;
+  --border:rgba(0,217,163,0.15);
+  --border2:rgba(245,247,250,0.08);
   --card:rgba(255,255,255,0.03);
-  --card-h:rgba(62,207,142,0.05);
+  --card-h:rgba(0,217,163,0.05);
 }
 html{scroll-behavior:smooth;}
 body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;}
@@ -272,10 +272,25 @@ footer{background:var(--bg2);border-top:1px solid var(--border2);padding:3rem 5r
   footer{padding:2.5rem 3rem;}
 }
 
+/* WHATSAPP FLOAT */
+.whatsapp-float{position:fixed;bottom:2rem;right:2rem;z-index:999;}
+.whatsapp-btn{width:60px;height:60px;background:linear-gradient(135deg,#25d366 0%,#128c7e 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);cursor:pointer;transition:all 0.3s ease;animation:pulse-wa 2s infinite;}
+.whatsapp-btn:hover{transform:scale(1.1);box-shadow:0 6px 30px rgba(37,211,102,0.6);}
+.whatsapp-btn svg{width:32px;height:32px;}
+@keyframes pulse-wa{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.4);}50%{box-shadow:0 4px 30px rgba(37,211,102,0.7);}}
+.whatsapp-tooltip{position:absolute;right:75px;top:50%;transform:translateY(-50%);background:var(--bg2);border:1px solid var(--border);padding:0.6rem 1rem;border-radius:8px;white-space:nowrap;font-size:0.85rem;color:var(--text);opacity:0;pointer-events:none;transition:opacity 0.3s,transform 0.3s;}
+.whatsapp-float:hover .whatsapp-tooltip{opacity:1;transform:translateY(-50%) translateX(-5px);}
+.whatsapp-tooltip::after{content:'';position:absolute;right:-6px;top:50%;transform:translateY(-50%);width:0;height:0;border-left:6px solid var(--border);border-top:6px solid transparent;border-bottom:6px solid transparent;}
+
 @media(max-width:768px){
   nav{padding:0 1.5rem;}
   .nav-links,.nav-cta{display:none;}
   .hamburger{display:flex;}
+
+  .whatsapp-float{bottom:1.5rem;right:1.5rem;}
+  .whatsapp-btn{width:56px;height:56px;}
+  .whatsapp-btn svg{width:28px;height:28px;}
+  .whatsapp-tooltip{display:none;}
 
   .hero{padding:5rem 1.5rem 3rem;flex-direction:column;justify-content:center;min-height:100vh;gap:2rem;}
   .hero-content{max-width:100%;}
@@ -324,6 +339,18 @@ footer{background:var(--bg2);border-top:1px solid var(--border2);padding:3rem 5r
   .svc-card{padding:1.8rem;}
   .step{padding:1.8rem 1.5rem;}
 }
+
+/* SERVICE CARD IMAGE */
+.svc-img{width:100%;height:160px;border-radius:10px;overflow:hidden;margin-bottom:1.5rem;position:relative;z-index:1;}
+.svc-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;filter:brightness(0.75) saturate(0.9);}
+.svc-card:hover .svc-img img{transform:scale(1.06);filter:brightness(0.85) saturate(1);}
+.svc-img-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(10,15,13,0.7) 100%);}
+
+/* DOCTOR PHOTO */
+.dr-photo-wrap{width:100%;height:100%;position:relative;}
+.dr-photo-wrap img{width:100%;height:100%;object-fit:cover;object-position:top center;border-radius:18px;}
+.dr-photo-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(10,15,13,0.55) 100%);border-radius:18px;}
+
 </style>
 </head>
 <body>
@@ -336,7 +363,6 @@ footer{background:var(--bg2);border-top:1px solid var(--border2);padding:3rem 5r
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#process">Process</a></li>
     <li><a href="#reviews">Reviews</a></li>
     <li><a href="#booking">Contact</a></li>
   </ul>
@@ -349,7 +375,6 @@ footer{background:var(--bg2);border-top:1px solid var(--border2);padding:3rem 5r
 <div class="mobile-menu" id="mobileMenu">
   <a href="#services" onclick="closeMenu()">Services</a>
   <a href="#about" onclick="closeMenu()">About</a>
-  <a href="#process" onclick="closeMenu()">Process</a>
   <a href="#reviews" onclick="closeMenu()">Reviews</a>
   <a href="#booking" onclick="closeMenu()">Contact</a>
   <button class="mob-cta" onclick="closeMenu();document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Book Appointment →</button>
@@ -364,8 +389,8 @@ footer{background:var(--bg2);border-top:1px solid var(--border2);padding:3rem 5r
   </div>
   <div class="hero-content">
     <div class="hero-pill"><div class="hero-pill-dot"></div><span>Now accepting new patients</span></div>
-    <h1 class="hero-title">A smile you'll<br><em>love to share.</em></h1>
-    <p class="hero-body">Personalised, gentle dental care for the whole family. From check-ups to complete smile transformations — your comfort comes first, always.</p>
+    <h1 class="hero-title">Your perfect smile<br><em>starts here.</em></h1>
+    <p class="hero-body">Advanced dental care with a gentle touch. From routine cleanings to complete smile makeovers — experience dentistry that puts your comfort and confidence first.</p>
     <div class="hero-actions">
       <button class="btn-primary" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Book Appointment <span class="arrow">→</span></button>
       <button class="btn-ghost" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">View Services</button>
@@ -415,20 +440,18 @@ footer{background:var(--bg2);border-top:1px solid var(--border2);padding:3rem 5r
 <!-- MARQUEE -->
 <div class="marquee-wrap">
   <div class="marquee-track">
-    <div class="marquee-item"><div class="marquee-dot"></div>General Dentistry</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>Teeth Whitening</div>
     <div class="marquee-item"><div class="marquee-dot"></div>Dental Implants</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>Orthodontics</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>Veneers</div>
     <div class="marquee-item"><div class="marquee-dot"></div>Root Canal</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Orthodontics</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Flap Surgery</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Pedodontics</div>
     <div class="marquee-item"><div class="marquee-dot"></div>Cosmetic Dentistry</div>
     <div class="marquee-item"><div class="marquee-dot"></div>Family Care</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>General Dentistry</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>Teeth Whitening</div>
     <div class="marquee-item"><div class="marquee-dot"></div>Dental Implants</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>Orthodontics</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>Veneers</div>
     <div class="marquee-item"><div class="marquee-dot"></div>Root Canal</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Orthodontics</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Flap Surgery</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Pedodontics</div>
     <div class="marquee-item"><div class="marquee-dot"></div>Cosmetic Dentistry</div>
     <div class="marquee-item"><div class="marquee-dot"></div>Family Care</div>
   </div>
@@ -439,7 +462,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border2);padding:3rem 5r
   <div class="stat-item reveal"><span class="stat-num" data-target="2400">0</span><div class="stat-label">Happy Patients</div></div>
   <div class="stat-item reveal reveal-d1"><span class="stat-num" data-target="98" data-suffix="%">0</span><div class="stat-label">Satisfaction Rate</div></div>
   <div class="stat-item reveal reveal-d2"><span class="stat-num" data-target="12" data-suffix="+">0</span><div class="stat-label">Years Experience</div></div>
-  <div class="stat-item reveal reveal-d3"><span class="stat-num" data-target="8">0</span><div class="stat-label">Treatments Offered</div></div>
+  <div class="stat-item reveal reveal-d3"><span class="stat-num" data-target="5">0</span><div class="stat-label">Specialized Services</div></div>
 </div>
 
 <!-- SERVICES -->
@@ -453,45 +476,43 @@ footer{background:var(--bg2);border-top:1px solid var(--border2);padding:3rem 5r
   </div>
   <div class="services-grid">
     <div class="svc-card reveal">
+      <div class="svc-img"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&q=80" alt="Dental Implants" loading="lazy" crossorigin="anonymous" onerror="this.style.display='none'"/><div class="svc-img-overlay"></div></div>
       <div class="svc-num">01</div>
-      <div class="svc-icon-wrap"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2C6.5 2 3.5 5 3.5 8.5C3.5 11.2 5 12.8 5.8 15C6.6 17.3 6.8 20.5 7.6 22.3" stroke="#3ecf8e" stroke-width="1.3" stroke-linecap="round"/><path d="M10 2C13.5 2 16.5 5 16.5 8.5C16.5 11.2 15 12.8 14.2 15C13.4 17.3 13.2 20.5 12.4 22.3" stroke="#3ecf8e" stroke-width="1.3" stroke-linecap="round"/></svg></div>
-      <div class="svc-name">General Check-up</div>
-      <p class="svc-desc">Comprehensive exams, professional cleaning, and X-rays to keep your teeth in perfect health year-round.</p>
+      <div class="svc-icon-wrap"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="4" y="8" width="12" height="9" rx="2" stroke="#00d9a3" stroke-width="1.3"/><path d="M7 8V6C7 4.3 8.3 3 10 3C11.7 3 13 4.3 13 6V8" stroke="#00d9a3" stroke-width="1.3"/></svg></div>
+      <div class="svc-name">Dental Implants</div>
+      <p class="svc-desc">Permanent tooth replacement solution using titanium posts that fuse with your jawbone, providing a stable foundation for natural-looking crowns.</p>
       <div class="svc-arr">Learn more <span class="svc-arrow">→</span></div>
     </div>
     <div class="svc-card reveal reveal-d1">
+      <div class="svc-img"><img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=600&q=80" alt="Root Canal Treatment" loading="lazy" crossorigin="anonymous" onerror="this.style.display='none'"/><div class="svc-img-overlay"></div></div>
       <div class="svc-num">02</div>
-      <div class="svc-icon-wrap"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="#3ecf8e" stroke-width="1.3"/><path d="M7 10L9 12L13 8" stroke="#3ecf8e" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="svc-name">Teeth Whitening</div>
-      <p class="svc-desc">Professional-grade whitening that brightens your smile by up to 8 shades, safely and comfortably.</p>
+      <div class="svc-icon-wrap"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="6" width="14" height="10" rx="2" stroke="#00d9a3" stroke-width="1.3"/><path d="M6 9H14M6 12H11" stroke="#00d9a3" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+      <div class="svc-name">Root Canal Treatment</div>
+      <p class="svc-desc">Advanced endodontic therapy to save infected or damaged teeth. Painless procedure using modern techniques and rotary instruments for optimal results.</p>
       <div class="svc-arr">Learn more <span class="svc-arrow">→</span></div>
     </div>
     <div class="svc-card reveal reveal-d2">
+      <div class="svc-img"><img src="https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=600&q=80" alt="Orthodontic Braces" loading="lazy" crossorigin="anonymous" onerror="this.style.display='none'"/><div class="svc-img-overlay"></div></div>
       <div class="svc-num">03</div>
-      <div class="svc-icon-wrap"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="4" y="8" width="12" height="9" rx="2" stroke="#3ecf8e" stroke-width="1.3"/><path d="M7 8V6C7 4.3 8.3 3 10 3C11.7 3 13 4.3 13 6V8" stroke="#3ecf8e" stroke-width="1.3"/></svg></div>
-      <div class="svc-name">Dental Implants</div>
-      <p class="svc-desc">Permanent, natural-looking replacements that restore full function, aesthetics, and confidence.</p>
+      <div class="svc-icon-wrap"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10C4 7 6.7 4.5 10 4.5C13.3 4.5 16 7 16 10" stroke="#00d9a3" stroke-width="1.3" stroke-linecap="round"/><path d="M4 10C4 13 6.7 15.5 10 15.5C13.3 15.5 16 13 16 10" stroke="#00d9a3" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+      <div class="svc-name">Brackets (Orthodontics)</div>
+      <p class="svc-desc">Comprehensive orthodontic treatment with metal or ceramic braces to correct misaligned teeth, bite issues, and achieve a perfectly straight smile.</p>
       <div class="svc-arr">Learn more <span class="svc-arrow">→</span></div>
     </div>
     <div class="svc-card reveal">
+      <div class="svc-img"><img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=600&q=80" alt="Flap Surgery" loading="lazy" crossorigin="anonymous" onerror="this.style.display='none'"/><div class="svc-img-overlay"></div></div>
       <div class="svc-num">04</div>
-      <div class="svc-icon-wrap"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10C4 7 6.7 4.5 10 4.5C13.3 4.5 16 7 16 10" stroke="#3ecf8e" stroke-width="1.3" stroke-linecap="round"/><path d="M4 10C4 13 6.7 15.5 10 15.5C13.3 15.5 16 13 16 10" stroke="#3ecf8e" stroke-width="1.3" stroke-linecap="round"/></svg></div>
-      <div class="svc-name">Braces & Aligners</div>
-      <p class="svc-desc">Straighten your smile discreetly with clear aligners or traditional braces tailored to your goals.</p>
+      <div class="svc-icon-wrap"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2C6.5 2 3.5 5 3.5 8.5C3.5 11.2 5 12.8 5.8 15C6.6 17.3 6.8 20.5 7.6 22.3" stroke="#00d9a3" stroke-width="1.3" stroke-linecap="round"/><path d="M10 2C13.5 2 16.5 5 16.5 8.5C16.5 11.2 15 12.8 14.2 15C13.4 17.3 13.2 20.5 12.4 22.3" stroke="#00d9a3" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+      <div class="svc-name">Flap Surgery</div>
+      <p class="svc-desc">Periodontal flap surgery to treat advanced gum disease, reduce pocket depth, and restore healthy gum tissue for improved oral health.</p>
       <div class="svc-arr">Learn more <span class="svc-arrow">→</span></div>
     </div>
     <div class="svc-card reveal reveal-d1">
+      <div class="svc-img"><img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&q=80" alt="Pediatric Dentistry" loading="lazy" crossorigin="anonymous" onerror="this.style.display='none'"/><div class="svc-img-overlay"></div></div>
       <div class="svc-num">05</div>
-      <div class="svc-icon-wrap"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 3L11.8 7.5L17 8.2L13.2 11.8L14.1 17L10 14.5L5.9 17L6.8 11.8L3 8.2L8.2 7.5L10 3Z" stroke="#3ecf8e" stroke-width="1.3" stroke-linejoin="round"/></svg></div>
-      <div class="svc-name">Porcelain Veneers</div>
-      <p class="svc-desc">Ultra-thin, custom-crafted veneers that perfect shape, size, and colour for a flawless front smile.</p>
-      <div class="svc-arr">Learn more <span class="svc-arrow">→</span></div>
-    </div>
-    <div class="svc-card reveal reveal-d2">
-      <div class="svc-num">06</div>
-      <div class="svc-icon-wrap"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="6" width="14" height="10" rx="2" stroke="#3ecf8e" stroke-width="1.3"/><path d="M6 9H14M6 12H11" stroke="#3ecf8e" stroke-width="1.3" stroke-linecap="round"/></svg></div>
-      <div class="svc-name">Root Canal</div>
-      <p class="svc-desc">Gentle, virtually pain-free root canal treatment designed to save your tooth and eliminate discomfort.</p>
+      <div class="svc-icon-wrap"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="#00d9a3" stroke-width="1.3"/><path d="M7 10L9 12L13 8" stroke="#00d9a3" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="svc-name">Pedodontics (Child Dentistry)</div>
+      <p class="svc-desc">Specialized dental care for infants, children, and adolescents. Gentle, child-friendly treatments including preventive care, fillings, and early orthodontics.</p>
       <div class="svc-arr">Learn more <span class="svc-arrow">→</span></div>
     </div>
   </div>
@@ -501,18 +522,10 @@ footer{background:var(--bg2);border-top:1px solid var(--border2);padding:3rem 5r
 <section class="about-section" id="about">
   <div class="about-visual reveal">
     <div class="about-frame">
-      <div class="about-bg-grid"></div>
-      <svg viewBox="0 0 200 260" fill="none" xmlns="http://www.w3.org/2000/svg" width="160" style="position:relative;z-index:1;animation:floatY 5s ease-in-out infinite;">
-        <circle cx="100" cy="70" r="48" fill="rgba(62,207,142,0.08)" stroke="rgba(62,207,142,0.2)" stroke-width="1"/>
-        <circle cx="100" cy="70" r="34" fill="rgba(62,207,142,0.1)" stroke="rgba(62,207,142,0.25)" stroke-width="1"/>
-        <path d="M60 140 Q60 110 100 106 Q140 110 140 140 L148 240 H52 Z" fill="rgba(62,207,142,0.06)" stroke="rgba(62,207,142,0.15)" stroke-width="1"/>
-        <path d="M82 108 Q82 94 100 91 Q118 94 118 108" stroke="rgba(62,207,142,0.3)" stroke-width="1.5" fill="none"/>
-        <path d="M88 148 Q88 140 96 138 Q104 140 108 148 Q110 154 108 162 Q104 168 100 168 Q96 168 92 162 Q90 154 88 148Z" stroke="#d4a84b" stroke-width="1.2" fill="rgba(212,168,75,0.08)"/>
-        <circle cx="100" cy="155" r="3" fill="#d4a84b" opacity="0.5"/>
-        <line x1="170" y1="40" x2="170" y2="52" stroke="#3ecf8e" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
-        <line x1="164" y1="46" x2="176" y2="46" stroke="#3ecf8e" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
-        <circle cx="32" cy="90" r="3" fill="#d4a84b" opacity="0.4"/>
-      </svg>
+      <div class="dr-photo-wrap">
+        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80" alt="Dr. Abhishek Singh — My Dentist" loading="lazy" crossorigin="anonymous" onerror="this.style.display='none'"/>
+        <div class="dr-photo-overlay"></div>
+      </div>
     </div>
     <div class="about-stat-float">
       <div class="num">12+</div>
@@ -528,47 +541,20 @@ footer{background:var(--bg2);border-top:1px solid var(--border2);padding:3rem 5r
     <h2 class="dr-name reveal reveal-d1">Dr. Abhishek Singh</h2>
     <div class="dr-title reveal reveal-d1">BDS, MDS — General & Cosmetic Dentistry</div>
     <div class="divider reveal reveal-d2"></div>
-    <p class="about-body reveal reveal-d2">With over 12 years of dedicated practice at <strong style="color:var(--text)">My Dentist Multispeciality Dental Clinic</strong>, Lucknow, Dr. Abhishek Singh brings both expertise and genuine warmth to every appointment. Located at 32A, Kuber Times Building, Canntt Road, opposite Odean Cinema, Lalbagh — the clinic is built around one idea: dental care should feel calm, not clinical.</p>
-    <p class="about-body reveal reveal-d3">Rated 4.5 ⭐ by patients, Dr. Singh believes every patient deserves time, transparency, and a treatment plan that fits their real life and goals. No rush, no jargon — just honest, quality care.</p>
+    <p class="about-body reveal reveal-d2">With over 12 years of dedicated practice at <strong style="color:var(--text)">My Dentist Multispeciality Dental Clinic</strong> in Lucknow, Dr. Abhishek Singh combines clinical excellence with compassionate care. Our modern facility at 32A Kuber Times Building, Canntt Road (opposite Odean Cinema, Lalbagh) is equipped with the latest dental technology to ensure precise, comfortable treatments.</p>
+    <p class="about-body reveal reveal-d3">Rated 4.5 ⭐ by over 2,400 satisfied patients, Dr. Singh is committed to personalized treatment plans that respect your time, budget, and goals. Experience dentistry that prioritizes your comfort and delivers exceptional results.</p>
     <div class="creds reveal reveal-d3">
-      <span class="cred">BDS Graduate</span>
-      <span class="cred">Cosmetic Certified</span>
-      <span class="cred">Implant Specialist</span>
+      <span class="cred">BDS, MDS Certified</span>
+      <span class="cred">Cosmetic Dentistry</span>
+      <span class="cred">Implantology Expert</span>
       <span class="cred">Orthodontics</span>
-      <span class="cred">Painless Dentistry</span>
+      <span class="cred">Laser Dentistry</span>
+      <span class="cred">Smile Design</span>
     </div>
   </div>
 </section>
 
-<!-- PROCESS -->
-<section class="process-section" id="process">
-  <div style="max-width:600px;margin-bottom:0;">
-    <div class="section-eyebrow reveal">How it works</div>
-    <h2 class="section-title reveal reveal-d1">Simple, seamless,<br>stress-free.</h2>
-  </div>
-  <div class="process-steps">
-    <div class="step reveal">
-      <div class="step-num">01</div>
-      <div class="step-name">Book Online</div>
-      <p class="step-desc">Pick your preferred date and service in under 2 minutes. No phone calls needed.</p>
-    </div>
-    <div class="step reveal reveal-d1">
-      <div class="step-num">02</div>
-      <div class="step-name">Consultation</div>
-      <p class="step-desc">We listen, examine, and explain everything clearly — no pressure, no surprises.</p>
-    </div>
-    <div class="step reveal reveal-d2">
-      <div class="step-num">03</div>
-      <div class="step-name">Your Treatment</div>
-      <p class="step-desc">Gentle, precise care with the latest techniques to ensure your comfort throughout.</p>
-    </div>
-    <div class="step reveal reveal-d3">
-      <div class="step-num">04</div>
-      <div class="step-name">Beautiful Smile</div>
-      <p class="step-desc">Walk out feeling confident, with clear aftercare guidance and our ongoing support.</p>
-    </div>
-  </div>
-</section>
+
 
 <!-- TESTIMONIALS -->
 <section class="test-section" id="reviews">
@@ -577,17 +563,17 @@ footer{background:var(--bg2);border-top:1px solid var(--border2);padding:3rem 5r
   <div class="test-grid">
     <div class="test-card reveal reveal-d1">
       <div class="test-stars">★★★★★</div>
-      <p class="test-text">"I used to dread dental visits. Now I actually look forward to coming here. The clinic feels so calm and the doctor takes time to explain everything."</p>
+      <p class="test-text">"I used to fear dental visits, but Dr. Singh's gentle approach and clear explanations changed everything. The clinic is spotless, modern, and incredibly calming."</p>
       <div class="test-author-row"><div class="test-avatar">PS</div><div><div class="test-name">Priya S.</div><div class="test-meta">Patient for 5 years</div></div></div>
     </div>
     <div class="test-card reveal reveal-d2">
       <div class="test-stars">★★★★★</div>
-      <p class="test-text">"My veneers look completely natural. I genuinely cannot stop smiling. The results exceeded every single expectation I had going in."</p>
+      <p class="test-text">"My smile transformation with veneers exceeded all expectations. They look completely natural, and the attention to detail was remarkable. Life-changing results!"</p>
       <div class="test-author-row"><div class="test-avatar">RM</div><div><div class="test-name">Rahul M.</div><div class="test-meta">Veneers patient</div></div></div>
     </div>
     <div class="test-card reveal reveal-d3">
       <div class="test-stars">★★★★★</div>
-      <p class="test-text">"Brought my entire family including two nervous kids. They were completely at ease the whole time. Best dental experience we've ever had."</p>
+      <p class="test-text">"Dr. Singh is wonderful with children! My kids were nervous at first, but his patient, friendly approach made them comfortable. Now they actually enjoy dental visits!"</p>
       <div class="test-author-row"><div class="test-avatar">AK</div><div><div class="test-name">Anita K.</div><div class="test-meta">Family patient</div></div></div>
     </div>
   </div>
@@ -609,7 +595,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border2);padding:3rem 5r
     </div>
     <div class="info-item reveal reveal-d3">
       <div class="info-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="4" width="14" height="10" rx="1.5" stroke="#3ecf8e" stroke-width="1.3"/><path d="M2 6.5L9 10.5L16 6.5" stroke="#3ecf8e" stroke-width="1.3"/></svg></div>
-      <div><div class="info-lbl">Email</div><div class="info-val"><a href="mailto:info@mydentist.com" style="color:var(--text);text-decoration:none;">info@mydentist.com</a></div></div>
+      <div><div class="info-lbl">Email</div><div class="info-val">info@mydentist.com</div></div>
     </div>
     <div class="info-item reveal reveal-d3">
       <div class="info-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="#3ecf8e" stroke-width="1.3"/><path d="M9 5V9L12 11" stroke="#3ecf8e" stroke-width="1.3" stroke-linecap="round"/></svg></div>
@@ -632,12 +618,12 @@ footer{background:var(--bg2);border-top:1px solid var(--border2);padding:3rem 5r
       <div class="fg"><label>Email</label><input type="email" placeholder="you@email.com"/></div>
       <div class="fg"><label>Service</label>
         <select>
-          <option>General Check-up</option>
-          <option>Teeth Whitening</option>
           <option>Dental Implants</option>
-          <option>Braces &amp; Aligners</option>
-          <option>Porcelain Veneers</option>
-          <option>Root Canal</option>
+          <option>Root Canal Treatment</option>
+          <option>Brackets (Orthodontics)</option>
+          <option>Flap Surgery</option>
+          <option>Pedodontics (Child Dentistry)</option>
+          <option>General Check-up</option>
           <option>Other</option>
         </select>
       </div>
@@ -659,11 +645,22 @@ footer{background:var(--bg2);border-top:1px solid var(--border2);padding:3rem 5r
   <div class="footer-links">
     <a href="#services">Services</a>
     <a href="#about">About</a>
-    <a href="#process">Process</a>
+    <a href="#reviews">Reviews</a>
     <a href="#booking">Book</a>
   </div>
   <div class="footer-copy">© 2025 My Dentist. All rights reserved.</div>
 </footer>
+
+<!-- WHATSAPP FLOAT -->
+<div class="whatsapp-float">
+  <div class="whatsapp-tooltip">Chat with us on WhatsApp</div>
+  <a href="https://wa.me/917704866437?text=Hi%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20My%20Dentist%20clinic." target="_blank" class="whatsapp-btn" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 0C7.164 0 0 7.164 0 16c0 2.825.738 5.488 2.032 7.784L0 32l8.384-2.032A15.934 15.934 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0z" fill="#fff"/>
+      <path d="M25.36 22.36c-.448 1.264-2.224 2.32-3.632 2.624-.96.208-2.208.368-6.416-1.376-5.392-2.24-8.864-7.776-9.136-8.128-.256-.352-2.176-2.896-2.176-5.52 0-2.624 1.376-3.92 1.872-4.448.496-.528 1.088-.656 1.456-.656.368 0 .736 0 1.056.016.336.016.784-.128 1.232 1.008.448 1.152 1.536 3.776 1.664 4.048.128.272.224.592.048.944-.176.368-.272.592-.544.912-.272.32-.576.72-.816.96-.272.272-.56.576-.24 1.12.32.528 1.424 2.352 3.056 3.808 2.096 1.872 3.856 2.464 4.4 2.736.544.272.864.224 1.184-.144.32-.368 1.376-1.6 1.744-2.144.368-.544.736-.448 1.232-.272.496.176 3.136 1.488 3.68 1.76.544.272.896.4 1.024.624.128.224.128 1.296-.32 2.56z" fill="#25D366"/>
+    </svg>
+  </a>
+</div>
 
 <script>
 // Hamburger menu
