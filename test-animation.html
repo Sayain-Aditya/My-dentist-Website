@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+:root{
+  --teal-pale:#e6f7f3;
+  --border:rgba(11,158,122,0.18);
+  --shadow:rgba(11,158,122,0.12);
+  --shadow2:rgba(13,31,26,0.06);
+  --ink:#0d1f1a;
+  --ink2:#3d5a52;
+  --white:#ffffff;
+  --border-soft:rgba(13,31,26,0.08);
+}
+
+.benefit-card{
+  background:var(--teal-pale);
+  padding:1.8rem;
+  border-radius:16px;
+  border:1px solid var(--border);
+  transition:transform 0.3s ease,box-shadow 0.3s ease;
+  box-shadow:0 2px 8px var(--shadow2);
+  margin:20px;
+  width:300px;
+}
+.benefit-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 12px 32px var(--shadow);
+}
+
+details{
+  background:var(--white);
+  border:1px solid var(--border-soft);
+  border-radius:16px;
+  padding:1.5rem;
+  margin:20px;
+  cursor:pointer;
+  transition:transform 0.3s ease,box-shadow 0.3s ease,border-color 0.3s ease;
+  box-shadow:0 2px 8px var(--shadow2);
+  width:400px;
+}
+details:hover{
+  transform:translateY(-2px);
+  border-color:var(--border);
+  box-shadow:0 8px 24px var(--shadow2);
+}
+</style>
+</head>
+<body>
+<h1>Animation Test</h1>
+<div class="benefit-card">
+  <h4>Test Card</h4>
+  <p>Hover over me to see animation</p>
+</div>
+
+<details>
+  <summary>Test FAQ</summary>
+  <p>Hover over me to see animation</p>
+</details>
+</body>
+</html>
