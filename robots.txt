@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /Video/
 
-Sitemap: https://www.mydentistlucknow.com/sitemap.xml
+Sitemap: https://my-dentists.in/sitemap.xml
