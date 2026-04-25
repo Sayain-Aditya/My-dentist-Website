@@ -284,7 +284,7 @@ nav.scrolled .hamburger span{background:var(--ink);}
 .mob-cta{margin-top:1rem;background:var(--teal);color:#fff;border:none;padding:0.9rem;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:0.88rem;font-weight:600;cursor:pointer;width:100%;}
 
 /* ── HERO ──────────────────────────── */
-.hero{min-height:100vh;position:relative;overflow:hidden;z-index:1;margin-bottom:-200px;}
+.hero{min-height:100vh;position:relative;overflow:hidden;z-index:1;margin-bottom:0;}
 .hero-video-bg{position:fixed;top:0;left:0;width:100%;height:100vh;z-index:-1;}
 .hero-video-bg video{width:100%;height:100%;object-fit:cover;}
 .hero-video-overlay{position:fixed;top:0;left:0;width:100%;height:100vh;background:linear-gradient(135deg,rgba(13,31,26,0.85) 0%,rgba(11,158,122,0.75) 100%);z-index:-1;}
@@ -301,8 +301,8 @@ nav.scrolled .hamburger span{background:var(--ink);}
 .btn-primary:hover{background:var(--teal-light);transform:translateY(-2px);box-shadow:0 8px 32px var(--shadow);}
 .btn-primary .arrow{transition:transform 0.3s;}
 .btn-primary:hover .arrow{transform:translateX(4px);}
-.btn-ghost{display:inline-flex;align-items:center;gap:0.5rem;background:transparent;color:var(--ink2);border:1.5px solid var(--border-soft);padding:0.9rem 2rem;border-radius:99px;font-family:'DM Sans',sans-serif;font-size:0.88rem;font-weight:400;cursor:pointer;transition:all 0.3s;}
-.btn-ghost:hover{border-color:var(--teal);color:var(--teal);}
+.btn-secondary{display:inline-flex;align-items:center;gap:0.5rem;background:var(--white);color:var(--teal);border:2px solid var(--teal);padding:0.9rem 2rem;border-radius:99px;font-family:'DM Sans',sans-serif;font-size:0.88rem;font-weight:600;cursor:pointer;transition:all 0.3s;text-decoration:none;}
+.btn-secondary:hover{background:var(--teal);color:white;}
 .hero-trust{display:flex;align-items:center;gap:1.5rem;opacity:0;animation:fadeUp 0.7s 0.7s ease both;}
 .hero-avatars{display:flex;}
 .hero-avatars span{width:34px;height:34px;border-radius:50%;background:var(--teal-pale);border:2px solid white;display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:600;color:var(--teal);margin-left:-8px;}
@@ -772,12 +772,12 @@ footer{background:transparent;color:white;padding:3rem 5rem 1.5rem;position:rela
   <div class="hero-content">
     <div class="hero-bg-pattern"></div>
     <div class="hero-orb"></div>
-    <h1 class="hero-title">Best Dentist in Lucknow | My Dentist<br><em>Multispeciality Dental Clinic</em></h1>
+    <h1 class="hero-title">My Dentist<br><em>Multispeciality Dental Clinic</em></h1>
     <p class="hero-body">Looking for the best <strong>dentist in Lucknow</strong>? My Dentist is a leading <strong>dental clinic in Lucknow</strong> offering expert <strong>root canal treatment</strong>, <strong>dental implants</strong>, orthodontics, and cosmetic dentistry. Located in Lalbagh, we bring you 18+ years of dental excellence with advanced technology and personalized care. Your comfort is our priority, your confidence is our success.</p>
     <div class="hero-actions">
       <button class="btn-primary" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Book Appointment <span class="arrow">→</span></button>
-      <a href="tel:+919554240650" class="btn-primary" style="text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;">Call Now <span class="arrow">📞</span></a>
-      <button class="btn-ghost" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">View Services</button>
+      <a href="tel:+919554240650" class="btn-primary" style="text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;">Call Now</a>
+      <button class="btn-secondary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">View Services</button>
     </div>
     <div class="hero-trust">
       <div class="hero-avatars">
@@ -793,49 +793,11 @@ footer{background:transparent;color:white;padding:3rem 5rem 1.5rem;position:rela
     <h2>Where Care Meets Expertise</h2>
   </div>
   
-  <div class="hero-float-exp">
-    <div class="val">18+</div>
-    <div class="lbl">Years Expert</div>
-  </div>
-  
-  <div class="hero-float-rating">
-    <div class="stars">★★★★★</div>
-    <div class="val">4.5</div>
-    <div class="lbl">Rating</div>
-  </div>
-  
+
+
   <div class="scroll-ind"><span>Scroll</span><div class="scroll-line"></div></div>
 </section>
 
-<!-- SEO CONTENT SECTION -->
-<section class="section" style="background:var(--white);padding:4rem 5rem;" id="seo-content">
-  <article>
-    <h2 class="section-title reveal">Best Dentist in Lucknow for Complete Dental Care</h2>
-    <p class="section-sub reveal reveal-d1" style="max-width:100%;margin-bottom:2rem;">My Dentist Multispeciality Dental Clinic is recognized as the <strong>best dental clinic in Lucknow</strong>, offering comprehensive dental solutions. We specialize in <strong>root canal treatment in Lucknow</strong>, <strong>dental implants in Lucknow</strong>, <strong>braces treatment in Lucknow</strong>, cosmetic dentistry, and pediatric dental care. Our state-of-the-art facility in <strong>Lalbagh</strong> serves patients from <strong>Hazratganj</strong>, <strong>Gomti Nagar</strong>, and across Lucknow with world-class dental treatments.</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin-top:2rem;">
-      <div class="reveal" style="background:var(--teal-pale);padding:1.5rem;border-radius:16px;border:1px solid var(--border);">
-        <div style="font-size:2rem;margin-bottom:0.5rem;">✅</div>
-        <h3 style="font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:0.5rem;">18+ Years Experience</h3>
-        <p style="font-size:0.88rem;color:var(--ink2);line-height:1.6;">Expert dental care with nearly two decades of clinical excellence in Lucknow</p>
-      </div>
-      <div class="reveal reveal-d1" style="background:var(--teal-pale);padding:1.5rem;border-radius:16px;border:1px solid var(--border);">
-        <div style="font-size:2rem;margin-bottom:0.5rem;">👥</div>
-        <h3 style="font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:0.5rem;">2400+ Happy Patients</h3>
-        <p style="font-size:0.88rem;color:var(--ink2);line-height:1.6;">Trusted by thousands of satisfied patients across Lucknow</p>
-      </div>
-      <div class="reveal reveal-d2" style="background:var(--teal-pale);padding:1.5rem;border-radius:16px;border:1px solid var(--border);">
-        <div style="font-size:2rem;margin-bottom:0.5rem;">🔬</div>
-        <h3 style="font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:0.5rem;">Advanced Technology</h3>
-        <p style="font-size:0.88rem;color:var(--ink2);line-height:1.6;">Latest dental equipment and modern treatment techniques</p>
-      </div>
-      <div class="reveal reveal-d3" style="background:var(--teal-pale);padding:1.5rem;border-radius:16px;border:1px solid var(--border);">
-        <div style="font-size:2rem;margin-bottom:0.5rem;">❤️</div>
-        <h3 style="font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:0.5rem;">Personalized Care</h3>
-        <p style="font-size:0.88rem;color:var(--ink2);line-height:1.6;">Customized treatment plans tailored to your unique needs</p>
-      </div>
-    </div>
-  </article>
-</section>
 
 <!-- ── MARQUEE ─────────────────────── -->
 <div class="marquee-wrap">
@@ -881,7 +843,7 @@ footer{background:transparent;color:white;padding:3rem 5rem 1.5rem;position:rela
 
     <div class="svc-card reveal">
       <div class="svc-img">
-        <img src="images/Dental implant" alt="Dental implants in Lucknow - Best dental implant clinic" loading="lazy"/>
+        <img src="images/Dental Imp/Dental implant" alt="Dental implants in Lucknow - Best dental implant clinic" loading="lazy"/>
         <div class="svc-img-tag">Most Popular</div>
       </div>
       <div class="svc-body">
