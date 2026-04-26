@@ -195,7 +195,7 @@ details p{margin-top:1rem;font-size:0.92rem;color:var(--ink2);line-height:1.8;}
 .cta-section h2{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;margin-bottom:1rem;}
 .cta-section p{font-size:1.1rem;margin-bottom:2rem;opacity:0.95;}
 
-footer{background:var(--ink);color:white;padding:3rem 5rem 1.5rem;}
+footer{background:linear-gradient(135deg,#1a4d3e 0%,#0b9e7a 100%);color:white;padding:3rem 5rem 1.5rem;}
 .footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.15);}
 .footer-brand .logo{color:white;margin-bottom:1rem;font-size:1.4rem;}
 .footer-brand p{font-size:0.85rem;color:rgba(255,255,255,0.7);line-height:1.7;font-weight:300;max-width:240px;}
@@ -210,10 +210,17 @@ footer{background:var(--ink);color:white;padding:3rem 5rem 1.5rem;}
 .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
 .hamburger.open span:nth-child(2){opacity:0;}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-.mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;background:rgba(255,255,255,0.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border-soft);padding:1.5rem 2rem;flex-direction:column;z-index:299;box-shadow:0 8px 30px var(--shadow2);}
+.mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;background:rgba(255,255,255,0.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border-soft);padding:1.5rem 2rem;flex-direction:column;z-index:299;box-shadow:0 8px 30px var(--shadow2);max-height:calc(100vh - 72px);overflow-y:auto;}
 .mobile-menu.open{display:flex;}
 .mobile-menu a{text-decoration:none;font-size:0.9rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--ink2);padding:1rem 0;border-bottom:1px solid var(--border-soft);transition:color 0.2s;}
 .mobile-menu a:hover{color:var(--teal);}
+.mobile-menu-item{position:relative;}
+.mobile-menu-item > a{display:flex;justify-content:space-between;align-items:center;}
+.mobile-dropdown-toggle{font-size:1.2rem;transition:transform 0.3s;}
+.mobile-dropdown-toggle.open{transform:rotate(90deg);}
+.mobile-services-dropdown{display:none;flex-direction:column;padding-left:1rem;}
+.mobile-services-dropdown.open{display:flex;}
+.mobile-services-dropdown a{font-size:0.85rem;text-transform:none;letter-spacing:0.02em;padding:0.75rem 0;border-bottom:none;}
 .mob-cta{margin-top:1rem;background:var(--teal);color:#fff;border:none;padding:0.9rem;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:0.88rem;font-weight:600;cursor:pointer;width:100%;}
 
 .service-image{width:100%;max-width:1000px;margin:2rem auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
@@ -283,7 +290,18 @@ footer{background:var(--ink);color:white;padding:3rem 5rem 1.5rem;}
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="index.html#services" onclick="closeMenu()">Services</a>
+  <div class="mobile-menu-item">
+    <a href="index.html#services" onclick="toggleMobileDropdown(event)">Services <span class="mobile-dropdown-toggle" id="mobileDropdownToggle">›</span></a>
+    <div class="mobile-services-dropdown" id="mobileServicesDropdown">
+      <a href="dental-implants-lucknow.html" onclick="closeMenu()">Dental Implants</a>
+      <a href="root-canal-treatment-lucknow.html" onclick="closeMenu()">Root Canal Treatment</a>
+      <a href="braces-treatment-lucknow.html" onclick="closeMenu()">Braces Treatment</a>
+      <a href="flap-surgery-lucknow.html" onclick="closeMenu()">Flap Surgery</a>
+      <a href="pediatric-dentistry-lucknow.html" onclick="closeMenu()">Pediatric Dentistry</a>
+      <a href="smile-design-veneers-lucknow.html" onclick="closeMenu()">Smile Design & Veneers</a>
+      <a href="invisalign-lucknow.html" onclick="closeMenu()">Invisalign</a>
+    </div>
+  </div>
   <a href="index.html#about" onclick="closeMenu()">About</a>
   <a href="index.html#reviews" onclick="closeMenu()">Reviews</a>
   <a href="index.html#booking" onclick="closeMenu()">Contact</a>
@@ -485,25 +503,26 @@ footer{background:var(--ink);color:white;padding:3rem 5rem 1.5rem;}
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
-      <div class="logo" style="margin-bottom:1rem;"><img src="images/Logo.png" alt="My Dentist Lucknow" style="height:70px;"/></div>
+      <div class="logo" style="margin-bottom:1rem;">
+        <img src="images/Logo.png" alt="My Dentist Lucknow - Dental clinic in Lalbagh" style="height:70px;background:white;border-radius:50%;padding:0.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.04);"/>
+      </div>
       <p>Multispeciality dental care in Lucknow, combining clinical excellence with genuine compassion since 2012.</p>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Services</div>
-      <a href="dental-implants-lucknow.html">Dental Implants</a>
-      <a href="root-canal-treatment-lucknow.html">Root Canal</a>
-      <a href="braces-treatment-lucknow.html">Braces</a>
-      <a href="flap-surgery-lucknow.html">Flap Surgery</a>
-      <a href="pediatric-dentistry-lucknow.html">Pediatric Dentistry</a>
-      <a href="smile-design-veneers-lucknow.html">Smile Design</a>
-      <a href="invisalign-lucknow.html">Invisalign</a>
+      <a href="#services">Dental Implants</a>
+      <a href="#services">Root Canal</a>
+      <a href="#services">Orthodontics</a>
+      <a href="#services">Flap Surgery</a>
+      <a href="#services">Pedodontics</a>
+      <a href="#services">Smile Design</a>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Contact</div>
       <a href="tel:+919554240650">+91 95542 40650</a>
       <a href="mailto:meetdr.singh@gmail.com">meetdr.singh@gmail.com</a>
-      <a href="index.html#booking">32A, Kuber Times Bldg, Lalbagh, Lucknow</a>
-      <a href="index.html#booking">Mon–Sat: 9AM – 7PM</a>
+      <a href="#booking">32A, Kuber Times Bldg, Lalbagh, Lucknow</a>
+      <a href="#booking">Mon–Sat: 9AM – 7PM</a>
     </div>
   </div>
   <div class="footer-bottom">
@@ -521,6 +540,17 @@ function toggleMenu(){
 function closeMenu(){
   document.getElementById('hamburger').classList.remove('open');
   document.getElementById('mobileMenu').classList.remove('open');
+  var dropdown=document.getElementById('mobileServicesDropdown');
+  var toggle=document.getElementById('mobileDropdownToggle');
+  if(dropdown){dropdown.classList.remove('open');}
+  if(toggle){toggle.classList.remove('open');}
+}
+function toggleMobileDropdown(e){
+  e.preventDefault();
+  var dropdown=document.getElementById('mobileServicesDropdown');
+  var toggle=document.getElementById('mobileDropdownToggle');
+  dropdown.classList.toggle('open');
+  toggle.classList.toggle('open');
 }
 </script>`n</body>
 </html>

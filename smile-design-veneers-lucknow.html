@@ -50,6 +50,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;height:72px;padding:0 3rem;d
 .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1.5px;background:var(--teal);transition:width 0.3s;}
 .nav-links a:hover{color:var(--teal);}
 .nav-links a:hover::after{width:100%;}
+.nav-right{display:flex;align-items:center;gap:1rem;}
 .nav-cta{background:var(--teal);color:#fff;border:none;padding:0.58rem 1.5rem;border-radius:99px;font-size:0.8rem;font-weight:600;cursor:pointer;transition:all 0.3s;box-shadow:0 4px 16px var(--shadow);text-decoration:none;}
 .nav-cta:hover{background:var(--teal-light);transform:translateY(-1px);}
 .breadcrumb{background:var(--offwhite);padding:1.5rem 5rem;margin-top:72px;border-bottom:1px solid var(--border-soft);}
@@ -96,7 +97,7 @@ details p{margin-top:1rem;font-size:0.92rem;color:var(--ink2);line-height:1.8;}
 .cta-section{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-light) 100%);padding:4rem 5rem;text-align:center;color:white;}
 .cta-section h2{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;margin-bottom:1rem;}
 .cta-section p{font-size:1.1rem;margin-bottom:2rem;opacity:0.95;}
-footer{background:var(--ink);color:white;padding:3rem 5rem 1.5rem;}
+footer{background:linear-gradient(135deg,#1a4d3e 0%,#0b9e7a 100%);color:white;padding:3rem 5rem 1.5rem;}
 .footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.15);}
 .footer-brand .logo{color:white;margin-bottom:1rem;font-size:1.4rem;}
 .footer-brand p{font-size:0.85rem;color:rgba(255,255,255,0.7);line-height:1.7;font-weight:300;max-width:240px;}
@@ -106,7 +107,7 @@ footer{background:var(--ink);color:white;padding:3rem 5rem 1.5rem;}
 .footer-bottom{padding-top:2rem;}
 .footer-copy{font-size:0.75rem;color:rgba(255,255,255,0.5);text-align:center;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}.hamburger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:all 0.3s;}.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}.hamburger.open span:nth-child(2){opacity:0;}.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}.mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;background:rgba(255,255,255,0.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border-soft);padding:1.5rem 2rem;flex-direction:column;z-index:299;box-shadow:0 8px 30px var(--shadow2);}.mobile-menu.open{display:flex;}.mobile-menu a{text-decoration:none;font-size:0.9rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--ink2);padding:1rem 0;border-bottom:1px solid var(--border-soft);transition:color 0.2s;}.mobile-menu a:hover{color:var(--teal);}.mob-cta{margin-top:1rem;background:var(--teal);color:#fff;border:none;padding:0.9rem;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:0.88rem;font-weight:600;cursor:pointer;width:100%;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}.hamburger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:all 0.3s;}.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}.hamburger.open span:nth-child(2){opacity:0;}.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}.mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;background:rgba(255,255,255,0.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border-soft);padding:1.5rem 2rem;flex-direction:column;z-index:299;box-shadow:0 8px 30px var(--shadow2);max-height:calc(100vh - 72px);overflow-y:auto;}.mobile-menu.open{display:flex;}.mobile-menu a{text-decoration:none;font-size:0.9rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--ink2);padding:1rem 0;border-bottom:1px solid var(--border-soft);transition:color 0.2s;}.mobile-menu a:hover{color:var(--teal);}.mobile-menu-item{display:flex;flex-direction:column;}.mobile-dropdown-toggle{display:flex;justify-content:space-between;align-items:center;cursor:pointer;padding:1rem 0;border-bottom:1px solid var(--border-soft);font-size:0.9rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--ink2);}.mobile-dropdown-toggle::after{content:'›';font-size:1.5rem;transition:transform 0.3s;}.mobile-dropdown-toggle.open::after{transform:rotate(90deg);}.mobile-services-dropdown{display:none;flex-direction:column;padding-left:1rem;}.mobile-services-dropdown.open{display:flex;}.mobile-services-dropdown a{font-size:0.85rem;padding:0.75rem 0;text-transform:none;letter-spacing:0.02em;}.mob-cta{margin-top:1rem;background:var(--teal);color:#fff;border:none;padding:0.9rem;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:0.88rem;font-weight:600;cursor:pointer;width:100%;}
 @media(max-width:768px){
   nav{padding:0 1.5rem;height:64px;}
   .logo img{height:50px;}
@@ -157,10 +158,35 @@ footer{background:var(--ink);color:white;padding:3rem 5rem 1.5rem;}
   <li><a href="index.html#reviews">Reviews</a></li>
   <li><a href="index.html#booking">Contact</a></li>
 </ul>
+<div class="nav-right">
+<a href="tel:+919554240650" style="font-size:0.8rem;font-weight:500;color:var(--ink2);text-decoration:none;letter-spacing:0.02em;transition:color 0.2s;">+91 95542 40650</a>
+<a href="index.html#booking" class="nav-cta">Book Now</a>
+</div>
   <button class="hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
   </button>
-</nav>`n`n<div class="mobile-menu" id="mobileMenu">`n  <a href="index.html#services" onclick="closeMenu()">Services</a>`n  <a href="index.html#about" onclick="closeMenu()">About</a>`n  <a href="index.html#reviews" onclick="closeMenu()">Reviews</a>`n  <a href="index.html#booking" onclick="closeMenu()">Contact</a>`n  <button class="mob-cta" onclick="closeMenu();window.location.href='index.html#booking'">Book Appointment ?</button>`n</div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-item">
+    <div class="mobile-dropdown-toggle" onclick="toggleMobileDropdown(event)">
+      <span>Services</span>
+    </div>
+    <div class="mobile-services-dropdown">
+      <a href="dental-implants-lucknow.html" onclick="closeMenu()">Dental Implants</a>
+      <a href="root-canal-treatment-lucknow.html" onclick="closeMenu()">Root Canal Treatment</a>
+      <a href="braces-treatment-lucknow.html" onclick="closeMenu()">Braces Treatment</a>
+      <a href="flap-surgery-lucknow.html" onclick="closeMenu()">Flap Surgery</a>
+      <a href="pediatric-dentistry-lucknow.html" onclick="closeMenu()">Pediatric Dentistry</a>
+      <a href="smile-design-veneers-lucknow.html" onclick="closeMenu()">Smile Design & Veneers</a>
+      <a href="invisalign-lucknow.html" onclick="closeMenu()">Invisalign</a>
+    </div>
+  </div>
+  <a href="index.html#about" onclick="closeMenu()">About</a>
+  <a href="index.html#reviews" onclick="closeMenu()">Reviews</a>
+  <a href="index.html#booking" onclick="closeMenu()">Contact</a>
+  <button class="mob-cta" onclick="closeMenu();window.location.href='index.html#booking'">Book Appointment →</button>
+</div>
 <div class="breadcrumb">
 <div class="breadcrumb-list">
 <a href="index.html">Home</a> › <a href="index.html#services">Services</a> › <span>Smile Design & Veneers in Lucknow</span>
@@ -348,32 +374,55 @@ Veneers are polished to a natural shine. We provide care instructions and schedu
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
-      <div class="logo" style="margin-bottom:1rem;"><img src="images/Logo.png" alt="My Dentist Lucknow" style="height:70px;"/></div>
+      <div class="logo" style="margin-bottom:1rem;">
+        <img src="images/Logo.png" alt="My Dentist Lucknow - Dental clinic in Lalbagh" style="height:70px;background:white;border-radius:50%;padding:0.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.04);"/>
+      </div>
       <p>Multispeciality dental care in Lucknow, combining clinical excellence with genuine compassion since 2012.</p>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Services</div>
-      <a href="dental-implants-lucknow.html">Dental Implants</a>
-      <a href="root-canal-treatment-lucknow.html">Root Canal</a>
-      <a href="braces-treatment-lucknow.html">Braces</a>
-      <a href="flap-surgery-lucknow.html">Flap Surgery</a>
-      <a href="pediatric-dentistry-lucknow.html">Pediatric Dentistry</a>
-      <a href="smile-design-veneers-lucknow.html">Smile Design</a>
-      <a href="invisalign-lucknow.html">Invisalign</a>
+      <a href="#services">Dental Implants</a>
+      <a href="#services">Root Canal</a>
+      <a href="#services">Orthodontics</a>
+      <a href="#services">Flap Surgery</a>
+      <a href="#services">Pedodontics</a>
+      <a href="#services">Smile Design</a>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Contact</div>
       <a href="tel:+919554240650">+91 95542 40650</a>
       <a href="mailto:meetdr.singh@gmail.com">meetdr.singh@gmail.com</a>
-      <a href="index.html#booking">32A, Kuber Times Bldg, Lalbagh, Lucknow</a>
-      <a href="index.html#booking">Mon–Sat: 9AM – 7PM</a>
+      <a href="#booking">32A, Kuber Times Bldg, Lalbagh, Lucknow</a>
+      <a href="#booking">Mon–Sat: 9AM – 7PM</a>
     </div>
   </div>
   <div class="footer-bottom">
     <div class="footer-copy">© 2025 My Dentist Multispeciality Dental Clinic. All rights reserved.</div>
   </div>
 </footer>
-<script>`nfunction toggleMenu(){`n  var h=document.getElementById('hamburger');`n  var m=document.getElementById('mobileMenu');`n  h.classList.toggle('open');`n  m.classList.toggle('open');`n}`nfunction closeMenu(){`n  document.getElementById('hamburger').classList.remove('open');`n  document.getElementById('mobileMenu').classList.remove('open');`n}`n</script>`n</body>
+<script>
+function toggleMenu(){
+  var h=document.getElementById('hamburger');
+  var m=document.getElementById('mobileMenu');
+  h.classList.toggle('open');
+  m.classList.toggle('open');
+}
+function closeMenu(){
+  document.getElementById('hamburger').classList.remove('open');
+  document.getElementById('mobileMenu').classList.remove('open');
+  var dropdown=document.querySelector('.mobile-services-dropdown');
+  var toggle=document.querySelector('.mobile-dropdown-toggle');
+  if(dropdown)dropdown.classList.remove('open');
+  if(toggle)toggle.classList.remove('open');
+}
+function toggleMobileDropdown(e){
+  e.preventDefault();
+  var toggle=e.currentTarget;
+  var dropdown=toggle.nextElementSibling;
+  toggle.classList.toggle('open');
+  dropdown.classList.toggle('open');
+}
+</script>
 </html>
 
 
