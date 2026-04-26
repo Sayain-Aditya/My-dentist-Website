@@ -116,16 +116,33 @@ footer{background:var(--ink);color:white;padding:3rem 5rem 1.5rem;}
 .mobile-menu a{text-decoration:none;font-size:0.9rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--ink2);padding:1rem 0;border-bottom:1px solid var(--border-soft);transition:color 0.2s;}
 .mobile-menu a:hover{color:var(--teal);}
 .mob-cta{margin-top:1rem;background:var(--teal);color:#fff;border:none;padding:0.9rem;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:0.88rem;font-weight:600;cursor:pointer;width:100%;}
-@media(max-width:768px){  nav{padding:0 1rem;height:64px;}  .logo img{height:50px;}  .nav-links,.nav-right{display:none;}  .hamburger{display:flex;}
-.breadcrumb{padding:1rem 1rem;}
-.service-hero{padding:3rem 1rem 2rem;}
-.content-section{padding:3rem 1rem;}
-.faq-section{padding:3rem 1rem;}
-.cta-section{padding:3rem 1rem;}
+@media(max-width:768px){
+  nav{padding:0 1.5rem;height:64px;}
+  .logo img{height:50px;}
+  .nav-links,.nav-right{display:none;}
+  .hamburger{display:flex;}
+  .breadcrumb{padding:1rem 1.5rem;}
+  .service-hero{padding:2.5rem 1.5rem 2rem;}
+  .service-hero h1{font-size:2rem;}
+  .service-hero p{font-size:1rem;}
+  .content-section{padding:2.5rem 1.5rem;}
+  .content-section h2{font-size:1.8rem;}
+  .content-section h3{font-size:1.3rem;}
+  .content-section ul{margin-left:1.2rem;}
+  .benefits-grid{grid-template-columns:1fr;gap:1rem;}
+  .service-image{grid-template-columns:1fr;gap:1rem;}
+  .service-image .img-main{grid-column:1;grid-row:auto;}
+  .service-image .img-main img{min-height:250px;}
+  .service-image .img-side img{min-height:200px;}
+  .faq-section{padding:2.5rem 1.5rem;}
+  .faq-section h2{font-size:1.8rem;}
+  .cta-section{padding:2.5rem 1.5rem;}
+  .cta-section h2{font-size:1.8rem;}
   .footer-top{grid-template-columns:1fr;gap:2.5rem;}
   .footer-brand p{max-width:100%;}
-  footer{padding:2.5rem 1rem 1.5rem;}
-.cta-group{flex-direction:column;align-items:stretch;}
+  footer{padding:2.5rem 1.5rem 1.5rem;}
+  .cta-group{flex-direction:column;align-items:stretch;}
+  .btn-primary,.btn-secondary{justify-content:center;}
 }
 </style>
 </head>

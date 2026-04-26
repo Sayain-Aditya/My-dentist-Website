@@ -249,7 +249,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);o
 .loading-text{margin-top:2rem;font-size:0.9rem;color:var(--ink2);letter-spacing:0.05em;}
 
 /* ── NAV ───────────────────────────── */
-nav{position:fixed;top:0;left:0;right:0;z-index:300;height:72px;padding:0 3rem;display:flex;align-items:center;justify-content:space-between;transition:all 0.4s,transform 0.3s ease;background:rgba(13,31,26,0.5);backdrop-filter:blur(15px);border-bottom:1px solid rgba(255,255,255,0.1);}
+nav{position:fixed;top:0;left:0;right:0;z-index:300;height:72px;padding:0 3rem;display:flex;align-items:center;justify-content:space-between;transition:all 0.4s,transform 0.3s ease;background:var(--teal);backdrop-filter:blur(15px);border-bottom:1px solid rgba(255,255,255,0.1);}
 nav.scrolled{background:rgba(255,255,255,0.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border-soft);box-shadow:0 2px 24px var(--shadow2);}
 nav.nav-hidden{transform:translateY(-100%);}
 .logo{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:700;color:white;letter-spacing:-0.01em;display:flex;align-items:center;gap:0.3rem;transition:color 0.3s;}
@@ -567,11 +567,11 @@ footer{background:linear-gradient(135deg,#1a4d3e 0%,#0b9e7a 100%);color:white;pa
   .tooth-showcase{padding:2rem;}
 }
 @media(max-width:768px){
-  nav{padding:0 1rem;height:64px;}
+  nav{padding:0 1.5rem;height:64px;}
   .logo img{height:50px;}
   .nav-links,.nav-right{display:none;}
   .hamburger{display:flex;}
-  .hero-container{grid-template-columns:1fr;padding:5rem 1rem 2rem;gap:2rem;}
+  .hero-container{grid-template-columns:1fr;padding:5rem 1.5rem 2rem;gap:2rem;}
   .hero-image-side{height:300px;order:2;}
   .hero-content{order:1;padding:0;}
   .hero-title{font-size:2rem;margin-bottom:1rem;line-height:1.1;}
@@ -593,11 +593,11 @@ footer{background:linear-gradient(135deg,#1a4d3e 0%,#0b9e7a 100%);color:white;pa
   .stat-item:nth-child(2n){border-right:none;}
   .stat-num{font-size:2.2rem;}
   .stat-label{font-size:0.68rem;}
-  .section{padding:3rem 1rem;}
+  .section{padding:3rem 1.5rem;}
   .section-title{font-size:1.8rem;line-height:1.15;}
   .section-sub{font-size:0.88rem;}
   .section-eyebrow{font-size:0.65rem;}
-  .services-section{padding:3rem 1rem;}
+  .services-section{padding:3rem 1.5rem;}
   .services-header{flex-direction:column;gap:1rem;align-items:flex-start;}
   .services-header p{text-align:left !important;max-width:100% !important;}
   .services-scroll-wrapper{overflow-x:visible;}
@@ -619,39 +619,39 @@ footer{background:linear-gradient(135deg,#1a4d3e 0%,#0b9e7a 100%);color:white;pa
   .about-divider{margin:1.2rem 0.5rem;}
   .about-body{font-size:0.88rem;padding:0 0.5rem;color:var(--ink2);}
   .creds{padding:0 0.5rem;}
-  .process-section{padding:3rem 1rem 2rem;}
+  .process-section{padding:3rem 1.5rem 2rem;}
   .process-grid{grid-template-columns:1fr;gap:1.25rem;}
   .process-step{padding:2rem 1.5rem;}
-  .test-section{padding:3rem 1rem;}
+  .test-section{padding:3rem 1.5rem;}
   .test-header{flex-direction:column;gap:1rem;align-items:flex-start;}
   .test-overall{width:100%;justify-content:space-between;}
   .test-grid{grid-template-columns:1fr;gap:1.5rem;}
   .test-card{padding:1.5rem;}
-  .booking-section{grid-template-columns:1fr;padding:3rem 1rem;gap:2.5rem;}
-  .booking-form{padding:2rem 1.5rem;border-radius:20px;}
-  .form-title{font-size:1.5rem;}
-  .info-items{margin-top:2rem;gap:1.5rem;}
-  .map-wrap{margin-top:1.5rem;height:200px;}
-  footer{padding:2.5rem 1rem 1.5rem;}
-  .footer-top{grid-template-columns:1fr;gap:2.5rem;}
-  .footer-brand p{max-width:100%;}
-  .footer-col{margin-bottom:0;}
-  .footer-bottom{flex-direction:column;gap:1rem;text-align:center;align-items:center;}
-  .whatsapp-float{bottom:1.5rem;right:1rem;}
-  .whatsapp-btn{width:54px;height:54px;}
-  .whatsapp-tooltip{display:none;}
-  .whatsapp-popup{width:calc(100vw - 3rem);max-width:280px;right:0.75rem;left:auto;transform:translateY(10px) scale(0.95);bottom:70px;}
-  .whatsapp-popup.active{transform:translateY(0) scale(1);}
-  .chat-widget{bottom:5.5rem;right:1rem;}
-  .chat-bubble{width:54px;height:54px;}
-  .tooth-section{padding:3rem 1rem;}
-  .tooth-grid{grid-template-columns:1fr;gap:2rem;}
-  .tooth-info-panel{padding:2rem 1.5rem;min-height:auto;}
+  .booking-section{padding:2.5rem 1.5rem;gap:2rem;grid-template-columns:1fr;}
+  .booking-form{padding:1.75rem 1.25rem;}
+  .form-title{font-size:1.35rem;}
+  .form-row{grid-template-columns:1fr;}
+  .fg input,.fg select,.fg textarea{padding:0.7rem 0.9rem;font-size:0.85rem;}
+  .form-btn{padding:0.9rem;font-size:0.85rem;}
+  .info-items{gap:1.25rem;}
+  .info-icon{width:40px;height:40px;}
+  .info-val{font-size:0.85rem;}
+  .map-wrap{height:180px;}
+  footer{padding:2rem 1.5rem 1.25rem;}
+  .footer-brand p{font-size:0.8rem;max-width:100%;}
+  .footer-top{gap:2rem;grid-template-columns:1fr;}
+  .footer-col a{font-size:0.82rem;margin-bottom:0.6rem;}
+  .footer-col-title{font-size:0.7rem;margin-bottom:1rem;}
+  .tooth-section{padding:2.5rem 1.5rem;}
+  .tooth-grid{grid-template-columns:1fr;}
+  .tooth-info-panel{padding:1.75rem 1.25rem;}
+  .tooth-info-title{font-size:1.5rem;}
+  .tooth-info-desc{font-size:0.85rem;}
 }
 @media(max-width:480px){
-  nav{padding:0 0.75rem;}
+  nav{padding:0 1.5rem;}
   .logo img{height:45px;}
-  .hero-container{padding:4.5rem 0.75rem 2rem;gap:1.5rem;}
+  .hero-container{padding:4.5rem 1.5rem 2rem;gap:1.5rem;}
   .hero-image-side{height:250px;}
   .hero-content{padding:0;}
   .hero-title{font-size:1.75rem;margin-bottom:0.8rem;}
@@ -665,10 +665,10 @@ footer{background:linear-gradient(135deg,#1a4d3e 0%,#0b9e7a 100%);color:white;pa
   .stat-item{padding:1.25rem 0.75rem;}
   .stat-num{font-size:2rem;}
   .stat-label{font-size:0.65rem;}
-  .section{padding:2.5rem 0.75rem;}
+  .section{padding:2.5rem 1.5rem;}
   .section-title{font-size:1.6rem;}
   .section-sub{font-size:0.85rem;}
-  .services-section{padding:2.5rem 0.75rem;}
+  .services-section{padding:2.5rem 1.5rem;}
   .services-scroll-wrapper{overflow-x:visible;}
   .services-grid{display:grid;grid-template-columns:1fr;gap:1.5rem;}
   .svc-card{width:100%;}
@@ -676,20 +676,20 @@ footer{background:linear-gradient(135deg,#1a4d3e 0%,#0b9e7a 100%);color:white;pa
   .svc-body{padding:1.25rem;}
   .svc-name{font-size:0.95rem;}
   .svc-desc{font-size:0.8rem;}
-  .about-section{padding:2.5rem 0.75rem;gap:2rem;background:var(--white);}
+  .about-section{padding:2.5rem 1.5rem;gap:2rem;background:var(--white);}
   .about-visual{max-width:240px;}
   .dr-name{font-size:1.6rem;color:var(--ink);}
   .about-body{font-size:0.85rem;color:var(--ink2);}
-  .process-section{padding:2.5rem 0.75rem 1.5rem;}
+  .process-section{padding:2.5rem 1.5rem 1.5rem;}
   .process-grid{grid-template-columns:1fr;gap:1rem;}
   .process-step{padding:1.75rem 1.25rem;}
   .step-name{font-size:0.95rem;}
   .step-desc{font-size:0.8rem;}
-  .test-section{padding:2.5rem 0.75rem;}
+  .test-section{padding:2.5rem 1.5rem;}
   .test-grid{gap:1rem;}
   .test-card{padding:1.25rem;}
   .test-text{font-size:0.95rem;}
-  .booking-section{padding:2.5rem 0.75rem;gap:2rem;}
+  .booking-section{padding:2.5rem 1.5rem;gap:2rem;}
   .booking-form{padding:1.75rem 1.25rem;}
   .form-title{font-size:1.35rem;}
   .form-row{grid-template-columns:1fr;}
@@ -699,12 +699,13 @@ footer{background:linear-gradient(135deg,#1a4d3e 0%,#0b9e7a 100%);color:white;pa
   .info-icon{width:40px;height:40px;}
   .info-val{font-size:0.85rem;}
   .map-wrap{height:180px;}
-  footer{padding:2rem 0.75rem 1.25rem;}
+  footer{padding:2rem 1.5rem 1.25rem;}
   .footer-brand p{font-size:0.8rem;max-width:100%;}
   .footer-top{gap:2rem;}
   .footer-col a{font-size:0.82rem;margin-bottom:0.6rem;}
   .footer-col-title{font-size:0.7rem;margin-bottom:1rem;}
-  .tooth-section{padding:2.5rem 0.75rem;}
+  .tooth-section{padding:2.5rem 1.5rem;}
+  .tooth-grid{grid-template-columns:1fr;}
   .tooth-info-panel{padding:1.75rem 1.25rem;}
   .tooth-info-title{font-size:1.5rem;}
   .tooth-info-desc{font-size:0.85rem;}
@@ -1168,16 +1169,16 @@ footer{background:linear-gradient(135deg,#1a4d3e 0%,#0b9e7a 100%);color:white;pa
   <div class="whatsapp-tooltip">Chat with us on WhatsApp</div>
   <button class="whatsapp-btn" onclick="toggleWhatsAppPopup()" aria-label="Chat on WhatsApp">
     <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
-      <path d="M16 0C7.164 0 0 7.164 0 16c0 2.825.738 5.488 2.032 7.784L0 32l8.384-2.032A15.934 15.934 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0z" fill="#fff"/>
-      <path d="M25.36 22.36c-.448 1.264-2.224 2.32-3.632 2.624-.96.208-2.208.368-6.416-1.376-5.392-2.24-8.864-7.776-9.136-8.128-.256-.352-2.176-2.896-2.176-5.52 0-2.624 1.376-3.92 1.872-4.448.496-.528 1.088-.656 1.456-.656.368 0 .736 0 1.056.016.336.016.784-.128 1.232 1.008.448 1.152 1.536 3.776 1.664 4.048.128.272.224.592.048.944-.176.368-.272.592-.544.912-.272.32-.576.72-.816.96-.272.272-.56.576-.24 1.12.32.528 1.424 2.352 3.056 3.808 2.096 1.872 3.856 2.464 4.4 2.736.544.272.864.224 1.184-.144.32-.368 1.376-1.6 1.744-2.144.368-.544.736-.448 1.232-.272.496.176 3.136 1.488 3.68 1.76.544.272.896.4 1.024.624.128.224.128 1.296-.32 2.56z" fill="#25D366"/>
+      <path d="M16 0C7.164 0 0 7.164 0 16c0 2.825.738 5.488 2.032 7.784L0 32l6.288-1.524A15.934 15.934 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0z" fill="#fff"/>
+      <path d="M25.36 22.36c-.336.948-1.668 1.74-2.724 1.968-.72.156-1.656.276-4.812-1.032-4.044-1.68-6.648-5.832-6.852-6.096-.192-.264-1.632-2.172-1.632-4.14 0-1.968 1.032-2.94 1.404-3.336.372-.396.816-.492 1.092-.492.276 0 .552 0 .792.012.336.012.784-.128 1.232 1.008.448 1.152 1.536 3.776 1.664 4.048.128.272.224.592.048.944-.176.368-.272.592-.544.912-.272.32-.576.72-.816.96-.272.272-.56.576-.24 1.12.32.528 1.424 2.352 3.056 3.808 2.096 1.872 3.856 2.464 4.4 2.736.544.272.864.224 1.184-.144.32-.368 1.376-1.6 1.744-2.144.368-.544.736-.448 1.232-.272.496.176 3.136 1.488 3.68 1.76.544.272.896.4 1.024.624.128.224.128 1.296-.32 2.56z" fill="#25D366"/>
     </svg>
   </button>
   <div class="whatsapp-popup" id="whatsappPopup">
     <div class="whatsapp-popup-header">
       <div class="whatsapp-popup-avatar">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.549 4.116 1.524 5.842L0 24l6.288-1.524A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z" fill="#25D366"/>
-          <path d="M19.02 16.77c-.336.948-1.668 1.74-2.724 1.968-.72.156-1.656.276-4.812-1.032-4.044-1.68-6.648-5.832-6.852-6.096-.192-.264-1.632-2.172-1.632-4.14 0-1.968 1.032-2.94 1.404-3.336.372-.396.816-.492 1.092-.492.276 0 .552 0 .792.012.252.012.588-.096.924.756.336.864 1.152 2.832 1.248 3.036.096.204.168.444.036.708-.132.276-.204.444-.408.684-.204.24-.432.54-.612.72-.204.204-.42.432-.18.84.24.396 1.068 1.764 2.292 2.856 1.572 1.404 2.892 1.848 3.3 2.052.408.204.648.168.888-.108.24-.276 1.032-1.2 1.308-1.608.276-.408.552-.336.924-.204.372.132 2.352 1.116 2.76 1.32.408.204.672.3.768.468.096.168.096.972-.24 1.92z" fill="#fff"/>
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.549 4.116 1.524 5.842L0 32l6.288-1.524A11.95 11.95 0 0012 32c6.627 0 12-5.373 12-12S18.627 0 12 0z" fill="#25D366"/>
+          <path d="M19.02 16.77c-.336.948-1.668 1.74-2.724 1.968-.72.156-1.656.276-4.812-1.032-4.044-1.68-6.648-5.832-6.852-6.096-.192-.264-1.632-2.172-1.632-4.14 0-1.968 1.032-2.94 1.404-3.336.372-.396.816-.492 1.092-.492.276 0 .552 0 .792.012.336.012.784-.128 1.232 1.008.448 1.152 1.536 3.776 1.664 4.048.128.272.224.592.048.944-.176.368-.272.592-.544.912-.272.32-.576.72-.816.96-.272.272-.56.576-.24 1.12.32.528 1.424 2.352 3.056 3.808 2.096 1.872 3.856 2.464 4.4 2.736.544.272.864.224 1.184-.144.32-.368 1.376-1.6 1.744-2.144.368-.544.736-.448 1.232-.272.496.176 3.136 1.488 3.68 1.76.544.272.896.4 1.024.624.128.224.128 1.296-.32 2.56z" fill="#fff"/>
         </svg>
       </div>
       <div class="whatsapp-popup-info">
