@@ -5,9 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Dental Implants in Lucknow | Dentist in Lucknow | My Dentist Lalbagh</title>
 <meta name="description" content="Looking for a dentist in Lucknow for dental implants? My Dentist offers the best dental implants in Lucknow. Permanent tooth replacement with titanium implants. Book your appointment with a top dentist in Lucknow today!"/>
-<meta name="keywords" content="dentist in Lucknow, dental implants Lucknow, implant dentist Lucknow, dental implant cost Lucknow, best dental implant clinic Lucknow, titanium implants, dental clinic in Lucknow"/>
 <link rel="canonical" href="https://my-dentists.in/dental-implants-lucknow.html"/>
-<link rel="icon" type="image/png" href="images/Logo.png"/>
+<link rel="icon" type="image/png" href="/favicon.png"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet"/>
 
 <!-- Google tag (gtag.js) -->
@@ -124,7 +123,7 @@
 ::-webkit-scrollbar-track{background:var(--offwhite);}
 ::-webkit-scrollbar-thumb{background:var(--teal);border-radius:99px;}
 html{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:var(--teal) var(--offwhite);}
-body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);line-height:1.6;overflow-x:hidden;}
+html{margin:0;padding:0;}body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);line-height:1.6;overflow-x:hidden;margin:0;padding:0;}
 
 nav{position:fixed;top:0;left:0;right:0;z-index:300;height:72px;padding:0 3rem;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border-soft);box-shadow:0 2px 24px var(--shadow2);}
 .logo{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:0.3rem;text-decoration:none;}
@@ -186,18 +185,21 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;height:72px;padding:0 3rem;d
 .faq-section{background:var(--offwhite);padding:4rem 5rem;}
 .faq-section h2{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;color:var(--ink);margin-bottom:2rem;text-align:center;}
 .faq-container{max-width:900px;margin:0 auto;}
-.faq-container details{background:var(--white);border:1px solid rgba(13,31,26,0.08);border-radius:16px;padding:1.5rem;margin-bottom:1rem;cursor:pointer;box-shadow:0 2px 8px rgba(13,31,26,0.06);transition:all 0.3s ease;}
-.faq-container details:hover{transform:translateY(-2px);border-color:rgba(11,158,122,0.18);box-shadow:0 8px 24px rgba(13,31,26,0.06);}
-summary{font-size:1.05rem;font-weight:600;color:var(--ink);cursor:pointer;list-style:none;}
-details p{margin-top:1rem;font-size:0.92rem;color:var(--ink2);line-height:1.8;}
+.faq-item{background:var(--white);border:1px solid var(--border-soft);border-radius:16px;margin-bottom:1rem;overflow:hidden;transition:border-color 0.3s,box-shadow 0.3s;}
+.faq-item.open{border-color:var(--border);box-shadow:0 4px 20px var(--shadow);}
+.faq-question{width:100%;background:none;border:none;padding:1.5rem;font-family:'DM Sans',sans-serif;font-size:1.05rem;font-weight:600;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;text-align:left;gap:1rem;}
+.faq-arrow{font-size:1.4rem;color:var(--teal);transition:transform 0.35s ease;flex-shrink:0;line-height:1;}
+.faq-item.open .faq-arrow{transform:rotate(90deg);}
+.faq-body{max-height:0;overflow:hidden;transition:max-height 0.4s ease;}
+.faq-body p{padding:0 1.5rem 1.5rem;font-size:0.92rem;color:var(--ink2);line-height:1.8;margin:0;}
 
 .cta-section{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-light) 100%);padding:4rem 5rem;text-align:center;color:white;}
 .cta-section h2{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;margin-bottom:1rem;}
 .cta-section p{font-size:1.1rem;margin-bottom:2rem;opacity:0.95;}
 
-footer{background:linear-gradient(135deg,#1a4d3e 0%,#0b9e7a 100%);color:white;padding:3rem 5rem 1.5rem;}
+footer{background:linear-gradient(135deg,#1a4d3e 0%,#0b9e7a 100%);color:white;padding:3rem 5rem 1.5rem;display:block;margin:0;}
 .footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.15);}
-.footer-brand .logo{color:white;margin-bottom:1rem;font-size:1.4rem;}
+.footer-brand .logo{color:white;margin-bottom:1rem;font-size:1.4rem;}.footer-brand .logo img{background:white;border-radius:50%;padding:0.5rem;}
 .footer-brand p{font-size:0.85rem;color:rgba(255,255,255,0.7);line-height:1.7;font-weight:300;max-width:240px;}
 .footer-col-title{font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:1.2rem;font-weight:600;}
 .footer-col a{display:block;text-decoration:none;font-size:0.85rem;color:rgba(255,255,255,0.75);margin-bottom:0.7rem;transition:color 0.2s;}
@@ -264,7 +266,7 @@ footer{background:linear-gradient(135deg,#1a4d3e 0%,#0b9e7a 100%);color:white;pa
 </style>
 </head>
 <body>
-<h1 style="display:none;">Dentist in Lucknow - Dental Implants by Best Dentist</h1>
+
 
 <nav>
   <a href="index.html" class="logo"><img src="images/Logo.png" alt="My Dentist Lucknow"/></a>
@@ -316,7 +318,7 @@ footer{background:linear-gradient(135deg,#1a4d3e 0%,#0b9e7a 100%);color:white;pa
 </div>
 
 <section class="service-hero">
-  <h1>Dental Implants in Lucknow</h1>
+  <h1>Dental Implants in Lucknow - Expert Dentist in Lucknow</h1>
   <p>Permanent, natural-looking tooth replacement with titanium dental implants at My Dentist clinic in Lalbagh.</p>
   <div class="cta-group">
     <a href="index.html#booking" class="btn-primary">Book Appointment →</a>
@@ -327,7 +329,7 @@ footer{background:linear-gradient(135deg,#1a4d3e 0%,#0b9e7a 100%);color:white;pa
   <h2>What are Dental Implants?</h2>
   <p><strong>Dental implants</strong> are the gold standard for permanent tooth replacement. They consist of a titanium post surgically placed into your jawbone, which acts as an artificial tooth root. Once the implant fuses with the bone (osseointegration), a custom crown is attached, giving you a tooth that looks, feels, and functions just like your natural teeth.</p>
   
-  <p>At <strong>My Dentist Multispeciality Dental Clinic in Lalbagh, Lucknow</strong>, we specialize in advanced dental implant procedures using premium titanium implants and state-of-the-art technology. Our clinic serves patients from Hazratganj, Gomti Nagar, and across Lucknow with world-class implant dentistry.</p>
+  <p>At <strong>My Dentist Multispeciality Dental Clinic in Lalbagh, Lucknow</strong>, we specialize in advanced dental implant procedures using premium titanium implants and state-of-the-art technology. Our clinic serves patients from Hazratganj, Gomti Nagar, and across Lucknow with world-class implant dentistry. We also offer <a href="/root-canal-treatment-lucknow.html" style="color:var(--teal);text-decoration:none;">root canal treatment in Lucknow</a> and <a href="/smile-design-veneers-lucknow.html" style="color:var(--teal);text-decoration:none;">smile design in Lucknow</a>.</p>
 
   <div class="service-image">
     <div class="img-main">
@@ -471,22 +473,22 @@ footer{background:linear-gradient(135deg,#1a4d3e 0%,#0b9e7a 100%);color:white;pa
 <section class="faq-section">
   <h2>Frequently Asked Questions</h2>
   <div class="faq-container">
-    <details>
-      <summary>What is the cost of dental implants in Lucknow?</summary>
-      <p>Dental implant cost in Lucknow ranges from ₹25,000 to ₹50,000 per tooth including implant, abutment, and crown. At My Dentist Lalbagh, we offer premium quality implants with transparent pricing. Contact us at <a href="tel:+919554240650" style="color:var(--teal);">+91 95542 40650</a> for detailed pricing.</p>
-    </details>
-    <details>
-      <summary>How long do dental implants last?</summary>
-      <p>Dental implants can last 20-25 years or even a lifetime with proper care and oral hygiene. They have a 95%+ success rate and are the most durable tooth replacement option available.</p>
-    </details>
-    <details>
-      <summary>Is dental implant surgery painful?</summary>
-      <p>No, dental implant surgery is performed under local anesthesia and is virtually painless. Most patients experience minimal discomfort during and after the procedure, which can be managed with over-the-counter pain medication.</p>
-    </details>
-    <details>
-      <summary>Who is the best implant dentist in Lucknow?</summary>
-      <p>Dr. Abhishek Singh at My Dentist Multispeciality Dental Clinic in Lalbagh, Lucknow is a highly experienced implant dentist with 18+ years of expertise, 95%+ success rate, and 4.5-star patient ratings.</p>
-    </details>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">What is the cost of dental implants in Lucknow?<span class="faq-arrow">›</span></button>
+      <div class="faq-body"><p>Dental implant cost in Lucknow ranges from ₹25,000 to ₹50,000 per tooth including implant, abutment, and crown. At My Dentist Lalbagh, we offer premium quality implants with transparent pricing. Contact us at <a href="tel:+919554240650" style="color:var(--teal);">+91 95542 40650</a> for detailed pricing.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">How long do dental implants last?<span class="faq-arrow">›</span></button>
+      <div class="faq-body"><p>Dental implants can last 20-25 years or even a lifetime with proper care and oral hygiene. They have a 95%+ success rate and are the most durable tooth replacement option available.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Is dental implant surgery painful?<span class="faq-arrow">›</span></button>
+      <div class="faq-body"><p>No, dental implant surgery is performed under local anesthesia and is virtually painless. Most patients experience minimal discomfort during and after the procedure, which can be managed with over-the-counter pain medication.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Who is the best implant dentist in Lucknow?<span class="faq-arrow">›</span></button>
+      <div class="faq-body"><p>Dr. Abhishek Singh at My Dentist Multispeciality Dental Clinic in Lalbagh, Lucknow is a highly experienced implant dentist with 18+ years of expertise, 95%+ success rate, and 4.5-star patient ratings.</p></div>
+    </div>
   </div>
 </section>
 
@@ -505,7 +507,7 @@ footer{background:linear-gradient(135deg,#1a4d3e 0%,#0b9e7a 100%);color:white;pa
   <div class="footer-top">
     <div class="footer-brand">
       <div class="logo" style="margin-bottom:1rem;">
-        <img src="images/Logo.png" alt="My Dentist Lucknow - Dental clinic in Lalbagh" style="height:70px;background:white;border-radius:50%;padding:0.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.04);"/>
+        <img src="images/Logo.png" alt="My Dentist Lucknow - Dental clinic in Lalbagh" style="height:70px;"/>
       </div>
       <p>Multispeciality dental care in Lucknow, combining clinical excellence with genuine compassion since 2012.</p>
     </div>
@@ -553,7 +555,8 @@ function toggleMobileDropdown(e){
   dropdown.classList.toggle('open');
   toggle.classList.toggle('open');
 }
-</script>`n</body>
+function toggleFaq(btn){var item=btn.closest('.faq-item');var body=item.querySelector('.faq-body');var isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(function(el){el.classList.remove('open');el.querySelector('.faq-body').style.maxHeight='0';});if(!isOpen){item.classList.add('open');body.style.maxHeight=body.scrollHeight+'px';}}
+</script></body>
 </html>
 
 

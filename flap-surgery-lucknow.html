@@ -5,9 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Flap Surgery in Lucknow | Dentist in Lucknow | My Dentist Lalbagh</title>
 <meta name="description" content="Looking for a dentist in Lucknow for flap surgery? My Dentist offers expert gum surgery and periodontal treatment in Lucknow. Book your appointment with a top dentist in Lucknow today!"/>
-<meta name="keywords" content="dentist in Lucknow, flap surgery Lucknow, gum surgery Lucknow, periodontal surgery Lucknow, gum disease treatment Lucknow, periodontist Lucknow, dental clinic in Lucknow"/>
 <link rel="canonical" href="https://my-dentists.in/flap-surgery-lucknow.html"/>
-<link rel="icon" type="image/png" href="images/Logo.png"/>
+<link rel="icon" type="image/png" href="/favicon.png"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet"/>
 
 <!-- Google tag (gtag.js) -->
@@ -34,7 +33,7 @@
 ::-webkit-scrollbar-track{background:var(--offwhite);}
 ::-webkit-scrollbar-thumb{background:var(--teal);border-radius:99px;}
 html{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:var(--teal) var(--offwhite);}
-body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);line-height:1.6;overflow-x:hidden;}
+html{margin:0;padding:0;}body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);line-height:1.6;overflow-x:hidden;margin:0;padding:0;}
 nav{position:fixed;top:0;left:0;right:0;z-index:300;height:72px;padding:0 3rem;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border-soft);box-shadow:0 2px 24px var(--shadow2);}
 .logo{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:0.3rem;text-decoration:none;}
 .logo img{height:60px;width:auto;}
@@ -90,16 +89,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;height:72px;padding:0 3rem;d
 .faq-section{background:var(--offwhite);padding:4rem 5rem;}
 .faq-section h2{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;color:var(--ink);margin-bottom:2rem;text-align:center;}
 .faq-container{max-width:900px;margin:0 auto;}
-details{background:var(--white);border:1px solid var(--border-soft);border-radius:16px;padding:1.5rem;margin-bottom:1rem;cursor:pointer;transition:all 0.3s;}
-details:hover{border-color:var(--border);box-shadow:0 4px 16px var(--shadow2);}
-summary{font-size:1.05rem;font-weight:600;color:var(--ink);cursor:pointer;list-style:none;}
-details p{margin-top:1rem;font-size:0.92rem;color:var(--ink2);line-height:1.8;}
+.faq-item{background:var(--white);border:1px solid var(--border-soft);border-radius:16px;margin-bottom:1rem;overflow:hidden;transition:border-color 0.3s,box-shadow 0.3s;}
+.faq-item.open{border-color:var(--border);box-shadow:0 4px 20px var(--shadow);}
+.faq-question{width:100%;background:none;border:none;padding:1.5rem;font-family:'DM Sans',sans-serif;font-size:1.05rem;font-weight:600;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;text-align:left;gap:1rem;}
+.faq-arrow{font-size:1.4rem;color:var(--teal);transition:transform 0.35s ease;flex-shrink:0;line-height:1;}
+.faq-item.open .faq-arrow{transform:rotate(90deg);}
+.faq-body{max-height:0;overflow:hidden;transition:max-height 0.4s ease;}
+.faq-body p{padding:0 1.5rem 1.5rem;font-size:0.92rem;color:var(--ink2);line-height:1.8;margin:0;}
 .cta-section{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-light) 100%);padding:4rem 5rem;text-align:center;color:white;}
 .cta-section h2{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;margin-bottom:1rem;}
 .cta-section p{font-size:1.1rem;margin-bottom:2rem;opacity:0.95;}
-footer{background:linear-gradient(135deg,#1a4d3e 0%,#0b9e7a 100%);color:white;padding:3rem 5rem 1.5rem;}
+footer{background:linear-gradient(135deg,#1a4d3e 0%,#0b9e7a 100%);color:white;padding:3rem 5rem 1.5rem;display:block;margin:0;}
 .footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.15);}
-.footer-brand .logo{color:white;margin-bottom:1rem;font-size:1.4rem;}
+.footer-brand .logo{color:white;margin-bottom:1rem;font-size:1.4rem;}.footer-brand .logo img{background:white;border-radius:50%;padding:0.5rem;}
 .footer-brand p{font-size:0.85rem;color:rgba(255,255,255,0.7);line-height:1.7;font-weight:300;max-width:240px;}
 .footer-col-title{font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:1.2rem;font-weight:600;}
 .footer-col a{display:block;text-decoration:none;font-size:0.85rem;color:rgba(255,255,255,0.75);margin-bottom:0.7rem;transition:color 0.2s;}
@@ -122,7 +124,7 @@ footer{background:linear-gradient(135deg,#1a4d3e 0%,#0b9e7a 100%);color:white;pa
 </style>
 </head>
 <body>
-<h1 style="display:none;">Dentist in Lucknow - Flap Surgery by Best Dentist</h1>
+
 <nav>
 <a href="index.html" class="logo"><img src="images/Logo.png" alt="My Dentist Lucknow"/></a>
 <ul class="nav-links">
@@ -177,7 +179,7 @@ footer{background:linear-gradient(135deg,#1a4d3e 0%,#0b9e7a 100%);color:white;pa
 </div>
 </div>
 <section class="service-hero">
-<h1>Flap Surgery in Lucknow</h1>
+<h1>Flap Surgery in Lucknow - Expert Dentist in Lucknow</h1>
 <p>Advanced periodontal flap surgery at My Dentist clinic in Lalbagh. Expert gum disease treatment to restore your oral health.</p>
 <div class="cta-group">
 <a href="index.html#booking" class="btn-primary">Book Appointment →</a>
@@ -186,7 +188,7 @@ footer{background:linear-gradient(135deg,#1a4d3e 0%,#0b9e7a 100%);color:white;pa
 <article class="content-section">
 <h2>What is Flap Surgery?</h2>
 <p><strong>Flap surgery</strong>, also known as periodontal flap surgery or pocket reduction surgery, is an advanced dental procedure designed to treat severe gum disease (periodontitis). When gum disease progresses beyond the early stages, deep pockets form between teeth and gums, harboring bacteria that cannot be removed through regular cleaning or scaling.</p>
-<p>At <strong>My Dentist Multispeciality Dental Clinic in Lalbagh, Lucknow</strong>, we specialize in advanced periodontal surgery using modern techniques and equipment. Our clinic serves patients from Hazratganj, Gomti Nagar, and across Lucknow with comprehensive gum disease treatment.</p>
+<p>At <strong>My Dentist Multispeciality Dental Clinic in Lalbagh, Lucknow</strong>, we specialize in advanced periodontal surgery using modern techniques and equipment. Our clinic serves patients from Hazratganj, Gomti Nagar, and across Lucknow with comprehensive gum disease treatment. We also provide <a href="/dental-implants-lucknow.html" style="color:var(--teal);text-decoration:none;">dental implants in Lucknow</a> and <a href="/root-canal-treatment-lucknow.html" style="color:var(--teal);text-decoration:none;">root canal treatment in Lucknow</a>.</p>
 <div class="service-image">
   <div class="img-main">
     <img src="https://images.pexels.com/photos/3845630/pexels-photo-3845630.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Periodontal flap surgery procedure in Lucknow" loading="lazy"/>
@@ -298,7 +300,7 @@ Protective dressing may be applied. Detailed aftercare instructions and medicati
 </ul>
 <h3>Book Your Flap Surgery Consultation in Lucknow Today</h3>
 <p>Don't let advanced gum disease compromise your oral health and overall wellbeing. If you're experiencing deep gum pockets, loose teeth, or persistent gum problems, flap surgery may be the solution. At <strong>My Dentist Multispeciality Dental Clinic in Lalbagh, Lucknow</strong>, we provide expert periodontal surgery with advanced techniques and compassionate care.</p>
-<p>Serving patients from <strong>Lalbagh, Hazratganj, Gomti Nagar, and across Lucknow</strong>, we're committed to restoring your gum health and saving your natural teeth.</p>
+<p>Serving patients from <strong>Lalbagh, Hazratganj, Gomti Nagar, and across Lucknow</strong>, we're committed to restoring your gum health and saving your natural teeth. Learn about our <a href="/pediatric-dentistry-lucknow.html" style="color:var(--teal);text-decoration:none;">pediatric dentistry in Lucknow</a> for complete family dental care.</p>
 <div style="text-align:center;margin:3rem 0;">
 <a href="index.html#booking" class="btn-primary" style="font-size:1rem;padding:1rem 2.5rem;">Book Your Consultation Now →</a>
 </div>
@@ -320,22 +322,22 @@ Protective dressing may be applied. Detailed aftercare instructions and medicati
 <section class="faq-section">
 <h2>Frequently Asked Questions</h2>
 <div class="faq-container">
-<details>
-<summary>What is the cost of flap surgery in Lucknow?</summary>
-<p>Flap surgery cost in Lucknow ranges from ₹8,000 to ₹20,000 per quadrant depending on severity and complexity. At My Dentist Lalbagh, we offer transparent pricing with no hidden costs. Contact us at <a href="tel:+919554240650" style="color:var(--teal);">+91 95542 40650</a> for exact pricing.</p>
-</details>
-<details>
-<summary>Is flap surgery painful?</summary>
-<p>No, flap surgery is performed under local anesthesia, making it painless during the procedure. Post-operative discomfort is minimal and easily managed with prescribed pain medications. Most patients report only mild soreness.</p>
-</details>
-<details>
-<summary>How long does flap surgery take?</summary>
-<p>Flap surgery typically takes 1-2 hours per quadrant (one-fourth of the mouth). Full mouth treatment may be done in multiple appointments. Recovery takes 1-2 weeks with proper care.</p>
-</details>
-<details>
-<summary>Who needs flap surgery?</summary>
-<p>Flap surgery is recommended for patients with advanced gum disease, deep periodontal pockets (5mm or deeper), bone loss around teeth, or persistent gum infections that don't respond to non-surgical treatment.</p>
-</details>
+<div class="faq-item">
+<button class="faq-question" onclick="toggleFaq(this)">What is the cost of flap surgery in Lucknow?<span class="faq-arrow">›</span></button>
+<div class="faq-body"><p>Flap surgery cost in Lucknow ranges from ₹8,000 to ₹20,000 per quadrant depending on severity and complexity. At My Dentist Lalbagh, we offer transparent pricing with no hidden costs. Contact us at <a href="tel:+919554240650" style="color:var(--teal);">+91 95542 40650</a> for exact pricing.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-question" onclick="toggleFaq(this)">Is flap surgery painful?<span class="faq-arrow">›</span></button>
+<div class="faq-body"><p>No, flap surgery is performed under local anesthesia, making it painless during the procedure. Post-operative discomfort is minimal and easily managed with prescribed pain medications. Most patients report only mild soreness.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-question" onclick="toggleFaq(this)">How long does flap surgery take?<span class="faq-arrow">›</span></button>
+<div class="faq-body"><p>Flap surgery typically takes 1-2 hours per quadrant (one-fourth of the mouth). Full mouth treatment may be done in multiple appointments. Recovery takes 1-2 weeks with proper care.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-question" onclick="toggleFaq(this)">Who needs flap surgery?<span class="faq-arrow">›</span></button>
+<div class="faq-body"><p>Flap surgery is recommended for patients with advanced gum disease, deep periodontal pockets (5mm or deeper), bone loss around teeth, or persistent gum infections that don't respond to non-surgical treatment.</p></div>
+</div>
 </div>
 </section>
 <section class="cta-section">
@@ -350,7 +352,7 @@ Protective dressing may be applied. Detailed aftercare instructions and medicati
   <div class="footer-top">
     <div class="footer-brand">
       <div class="logo" style="margin-bottom:1rem;">
-        <img src="images/Logo.png" alt="My Dentist Lucknow - Dental clinic in Lalbagh" style="height:70px;background:white;border-radius:50%;padding:0.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.04);"/>
+        <img src="images/Logo.png" alt="My Dentist Lucknow - Dental clinic in Lalbagh" style="height:70px;"/>
       </div>
       <p>Multispeciality dental care in Lucknow, combining clinical excellence with genuine compassion since 2012.</p>
     </div>
@@ -397,6 +399,7 @@ function toggleMobileDropdown(e){
   toggle.classList.toggle('open');
   dropdown.classList.toggle('open');
 }
+function toggleFaq(btn){var item=btn.closest('.faq-item');var body=item.querySelector('.faq-body');var isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(function(el){el.classList.remove('open');el.querySelector('.faq-body').style.maxHeight='0';});if(!isOpen){item.classList.add('open');body.style.maxHeight=body.scrollHeight+'px';}}
 </script>
 </html>
 
