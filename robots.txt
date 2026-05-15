@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /Video/
+Disallow: /*.ps1$
+Disallow: /*.md$
 
 Sitemap: https://my-dentists.in/sitemap.xml
